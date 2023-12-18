@@ -33,7 +33,7 @@ class _FirstPageState extends State<FirstPage> {
         leading: IconButton(
           icon: Icon(Icons.favorite),
           onPressed: () {
-            print('Cat Icon Clicked');
+            print('Icon Clicked');
           },
         ),
       ),
@@ -45,10 +45,10 @@ class _FirstPageState extends State<FirstPage> {
             ElevatedButton(
               onPressed: () {
                 // 'Next' 버튼을 클릭할 때 실행되는 코드
-                //print('iscat: $iscat');
-                //setState(() {
-                //  isCat = false;
-                //});
+                print('iscat: $isCat');
+                setState(() {
+                  isCat = false;
+                });
                 Navigator.pushNamed(context, '/second');
               },
               child: Text('Next'),
@@ -76,7 +76,7 @@ class _SecondPageState extends State<SecondPage> {
         leading: IconButton(
           icon: Icon(Icons.favorite),
           onPressed: () {
-            print('Dog Icon Clicked');
+            print('Icon Clicked');
           },
         ),
       ),
@@ -89,6 +89,9 @@ class _SecondPageState extends State<SecondPage> {
               onPressed: () {
                 // 'Back' 버튼을 클릭할 때 실행되는 코드
                 print('isCat: $isCat');
+                setState(() {
+                  isCat = false;
+                });
                 Navigator.pop(context);
               },
               child: Text('Back'),
